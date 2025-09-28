@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
+}
+
+body {
+  background: #fff;
+  color: #272757;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  letter-spacing: 2px;
+}
+
+
+.content {
+  flex: 1; /* push footer to bottom */
+}
+
+/* header*/
+.header {
+  background: #fff;
+  border-bottom: 4px solid #d4af37; /* gold line */
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0 50px;
+  padding-top:10px;
+  padding-bottom:10px;
+  display: flex;                
+  justify-content: center;
+}
+
+.header-top .logo img {
+  width: 70px;
+}
+
+
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  column-gap: 20px;
+}
+
+.categories-btn {
+  background: none;
+  border: none;
+  font-size: 1px;
+  font-weight: bold;
+  color: #272757;
+  letter-spacing:2px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+
+}
+
+.search-container {
+  display: flex;
+  border: 2px solid #d4af37;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(212,175,55,0.4);
+  width: 60%;     
+  max-width: 600px; 
+  height: 35px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0 10px;
+  padding-left:30px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+
+.cart-icon {
+  justify-self: end;
+  padding-right:30px;
+}
+
+
+
+
+
+/* MAIN */
+.content {
+  display: flex;
+  padding: 20px 30px;
+  gap: 30px; /* para dili dikit */
+  align-items: flex-start;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  flex: 3;
+}
+
+.product {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* tanggalon ang flex-column aron dili forced ang taas */
+  display: block;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+
+.product img {
+  width: 100%;
+  height: auto;         /* auto height para dili ma-crop */
+  object-fit: contain;  /* pakita full image */
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.product h3 {
+  font-size: 15px;
+  margin: 6px 0 4px;
+  line-height: 1.3;
+}
+
+.product .author {
+  font-size: 13px;
+  color: #777;
+}
+
+.product .price {
+  color: #d4af37;          /* same tone sa discount */
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.product button {
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(#d4af37, #c9a234); /* gold gradient para naay depth */
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 80%;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 auto; 
+
+
+  /* 3D effect */
+  box-shadow: 0 4px 0 #a88734, 0 6px 10px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+    margin-top: auto;
+}
+
+.product button:hover {
+  background: #c89000;
+  box-shadow: 0 2px 0 #8c6f2d, 0 3px 6px rgba(0,0,0,0.2);
+  transform: translateY(2px); /* murag gi-press */
+}
+
+
+
+/* CART */
+.cart {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  /* mas dako ug shadow para murag 3D */
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.15),
+    0 6px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cart h2 {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  /* gamay gradient para dili flat tan-aw */
+  background: linear-gradient(180deg,#ffffff 0%,#f9f9f9 100%);
+  border-radius: 15px;
+  /* mas kusog ug layered shadow */
+  box-shadow:
+    0 8px 15px rgba(0,0,0,0.1),
+    0 4px 6px rgba(0,0,0,0.08);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item .details {
+  flex: 1;
+}
+
+.cart-item .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cart-item .author {
+  font-size: 12px;
+  color: #555;
+}
+
+.cart-item p {
+  margin: 3px 0;
+  
+}
+
+.price {
+  color: #d4af37; /* gold color */
+  font-weight: bold;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;      /* horizontal layout */
+  align-items: center;
+  gap: 8px;                 /* space between buttons and number */
+}
+
+.quantity span {
+  min-width: 20px;          /* fixed width so number doesn’t jump */
+  text-align: center;
+  font-weight: bold;
+}
+
+.quantity button {
+  background: linear-gradient(145deg, #d4af37, #c49a2e);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.quantity button:hover {
+  transform: scale(1.1);
+}
+
+.discount-heading {
+  text-align: center;
+  letter-spacing: 3px;   /* same style sa Shopping Cart h2 */
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #272757;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.05);
+  gap: 15px;
+}
+
+/* Gold box with 3D look */
+.percent {
+  background: linear-gradient(145deg, #d4af37, #c49a2e);
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 3px rgba(255,255,255,0.3),
+              inset 0 -2px 3px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 70px;
+}
+
+/* Text in the middle */
+.discount-text{
+  flex: 1;
+  font-size: 14px;
+  color: #272757;
+  letter-spacing: 1px;
+}
+
+/* Button on the right */
+.use-btn {
+  background: #fff;
+  border: 2px solid #d4af37;
+  color: #272757;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.use-btn:hover {
+  background: #d4af37;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+.total {
+  padding-top:50px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.place-order {
+    width: 70%;              /* gamay na width para dili kaayo dako */
+  margin: 10px auto;        /* auto margin left/right para center */
+  display: block; 
+  background: #d4af37;   
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+    letter-spacing: 2px;
+
+  /* 3D effect */
+  box-shadow:
+    0 3px 0 #b38c2a,
+    0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+.place-order:hover {
+  background: #c89000;
+}
+
+
+.footer {
+  
+  background: #fff;
+  border-top: 4px solid #d4af37;
+  border-radius: 30px 30px 0 0; 
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+
+  
+  display: flex;
+  justify-content: center;            /* center horizontally */
+  align-items: center;                /* align vertically */
+  gap: 20px
+} 
+
+.footer img {
+  width: 70px;
+  display: block;
+  display: inline-flex;
+
+}
+
+.footer p {
+  color: #272757; 
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+
+
+}
+
+
+
+
+
