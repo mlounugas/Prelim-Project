@@ -9,5 +9,5 @@ Marie Lou B. Nugas
 
 Instructions on how to run the system:
 you can click this link         https://mlounugas.github.io/Prelim-Project/
-i already hosted my website on github
+ i already hosted my website on github and please wait, it’ll take time to load the images.
 
