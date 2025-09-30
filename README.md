@@ -1,6 +1,6 @@
 Project Description:
 A Mini E-Commerce Bookstore Website in JavaScript. 
-The system lets users select and add different books to the cart, apply extra features like discounts, and see the cart update automatically with the total price. 
+The system lets users to add different books to the cart, apply extra feature like discount, and see the cart, total price, including its discount update automatically when items are added or removed from the cart.
 The project highlights three design patterns: Factory (for creating product types), Decorator (for adding discounts/features), and Observer (for auto-updating the cart). 
 The website also have a simple and user-friendly interface.
 
