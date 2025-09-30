@@ -8,4 +8,6 @@ Members:
 Marie Lou B. Nugas
 
 Instructions on how to run the system:
+you can click this link         https://mlounugas.github.io/Prelim-Project/
+i already hosted my website on github
 
